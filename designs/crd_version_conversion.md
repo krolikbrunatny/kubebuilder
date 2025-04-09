@@ -24,7 +24,7 @@ The basic concept is that all versions of an object share the storage. So say if
 
 One can think storage version as the hub and other versions as spoke to visualize the relationship between storage and other versions (as shown below in the diagram). The key thing to note is that conversion between storage and other version should be lossless (round trippable). As shown in the diagram below, v3 is the storage/hub version and v1, v2 and v4 are spoke version. The document uses storage version and hub interchangeably.
 
-![hub and spoke version diagram][version-diagram]
+![hub and spoke version diagram](../docs/book/src/multiversion-tutorial/conversion-diagram.svg)
 
 So if each spoke version (v1, v2 and v4 in this case) defines conversion function from/to the hub version, then conversion function between the spoke versions (v1, v2, v4) can be derived. For example, for converting an object from v1 to v4, we can convert v1 to v3 (the hub version) and v3 to v4.
 
